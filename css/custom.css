@@ -1,0 +1,338 @@
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#wrapper{
+}
+
+
+p{
+	font-family: 'Lora', serif;
+	font-size: 18px;
+}
+
+/**************** NAVBAR ******************/
+
+.nav{
+	background-color: #fff;
+	border: 0;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color:  #3a66a7;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: rgba(226, 148, 112, 1);
+}
+
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: rgba(102, 167, 213, 1);
+}
+
+a.underline:after{
+	content: "";
+	transition:0.5s all ease;
+	position:absolute;
+	bottom:0;
+	height:0.35rem;
+	width:0;
+	background-color:rgba(226, 148, 112, 1);
+	left:0;
+}
+a.underline:hover:after{
+	width:100%;
+}
+/**************** SECTION ******************/
+section{
+	padding: 60px 10px;
+}
+
+section h3, #contact h2{
+	color: #3a66a7;
+	font-weight: bold;
+}
+
+.img-section{
+	border-radius: 50%;
+	height: 180px;
+	width: 180px;
+}
+.img-section-me{
+	border-radius: 50%;
+	height: 160px;
+	width: 160px;
+}
+
+.p-container{
+	width: 550px;
+	margin: 0 auto;
+}
+
+/**************** PARALLAX ******************/
+.custom-parallax{
+	background: url('../img/cover.jpg') no-repeat top center fixed;
+	color: #fff;
+	background-size: cover;
+	height: 580px;
+	padding-top: 200px;
+}
+
+.custom-parallax h1{
+	font-family: 'Carter One', cursive;
+	font-size: 62px;	
+}
+
+.custom-parallax h2{
+	font-family: 'Carter One', cursive;
+	font-size: 32px;	
+}
+/**************** ABOUT ******************/
+#about{
+	height: 440px;
+	background-color: #dedede;
+	padding-top: 70px;
+}
+
+/**************** PORTFOLIO ******************/
+#portfolio-about{
+	height: 440px;
+	background-color: #fff;
+	padding-top: 60px;
+}
+
+#portfolio{
+	background-color: #7BC8A4;
+}
+
+.link-container{
+	padding: 30px;
+}
+
+/* portfolio image effects*/
+.container-effect{
+	list-style: none;
+	position: relative;
+	width: 500px;
+	height: 400px;
+	overflow: hidden;
+	background-color:rgba(26,76,110,0.5);
+	margin: 0 auto;
+	text-align: left;
+}
+
+.container-effect p, .container-effect h2 {
+    color:#fff;
+}
+
+.container-effect p {
+    font-size:12px;
+    width: 90%;
+}
+.container-effect h2 {
+    font-size:20px; 
+}
+
+.container-effect img{
+	width: 500px;
+	height: 400px;
+ 	position:absolute;
+    left:0;
+    bottom:0px;
+    -webkit-transition: bottom .3s ease-in-out;
+    -moz-transition: bottom .3s ease-in-out;
+    -o-transition: bottom .3s ease-in-out;
+    transition: bottom .3s ease-in-out
+}
+
+.container-effect img:hover {
+    bottom:-106px;
+    
+}
+/**************** CONTACT ******************/
+#contact{
+	padding: 40px 10px;
+	height: 500px;
+	background-color: #fff;
+}
+/**************** FORM ******************/
+form{
+	padding: 0px 10px;
+	padding-top: 20px;
+}
+
+.form-group{
+	position: relative;
+	padding: 5px 0px;
+}
+
+input.form-control, textarea.form-control{
+	outline: none;
+	box-shadow: none;
+	font-size: 14px;
+	border: 1px solid #fff;
+	border-bottom: 1px solid #bdbdbd;
+	padding-left: 0px;
+	
+}
+
+input.form-control:focus, textarea.form-control:focus{
+    box-shadow: none;
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+   outline: none;
+   border: 1px solid #fff; 
+   border-bottom: 2px solid rgba(102, 167, 213, 1);
+}
+
+.floating-label{
+	position: absolute;
+	pointer-events: none;
+	left: 0px;
+	top: 16px;
+	transition: 0.2s ease all;
+	color: #a8a8a8;
+}
+
+input:focus ~ .floating-label, 
+input:not(:focus):valid ~ .floating-label,
+textarea:focus ~ .floating-label, 
+textarea:not(:focus):valid ~ .floating-label{
+	top: -2px;
+	left: 0px;
+	font-size: 11px;
+	opacity: 1;
+	color: rgba(102, 167, 213, 1);
+}
+
+button[type="submit"]{
+	padding: 10px 15px;
+
+}
+
+/**************** FOOTER ******************/
+footer{
+	height: 200px;
+	background-color: rgba(102, 167, 213, 1);
+	position: relative;
+}
+
+.footer-container{
+	padding: 55px 0px;
+}
+
+footer ul{
+	list-style-type: none;
+	margin-right: 33px;
+}
+
+footer ul li{
+	display: inline-block;
+	background-color:rgba(0,0,0,0.2);
+	line-height: 45px;
+	margin: 0 4px;
+	width: 45px;
+	font-size: 1.5em;
+	-webkit-border-radius:3px;
+	border-radius: 3px;
+}
+
+footer ul li a{
+	color: #fff;
+	display: block;
+}
+
+footer ul li:hover{
+	background-color: #3a66a7;
+}
+
+footer ul li a:hover, footer ul li a:visited{
+	color: #fff;
+}
+
+.footer-text{
+	color: #fff;
+	margin: 0 auto;
+	padding: 0 35px;
+}
+
+/**************** MEDIA QUERIES ******************/
+
+@media only screen and (min-width: 768px){
+	.navbar{
+		padding: 20px 0px;
+		-webkit-transition: padding 0.5s ease-in-out;
+		-moz-transition: padding 0.5s ease-in-out;
+        transition: padding 0.5s ease-in-out;
+	}
+
+	.top-nav-collapse{
+		padding: 0;
+	}
+}
+
+@media only screen and (max-width: 768px){
+	#portfolio{
+		padding: 30px 0px;
+	}
+	#about, #portfolio-about{
+		height: 395px;
+		padding: 40px 10px;
+	}
+
+	.p-container{
+		width: 90%;
+	}
+
+	.custom-parallax{
+		height: 500px;
+		padding-top: 160px;
+	}
+	
+	.custom-parallax h1{
+		font-size: 48px;	
+	}
+
+	.custom-parallax h2{
+		font-size: 24px;	
+	}
+
+}
+
+
+@media only screen and (max-width: 610px){
+	 .container-effect img, .container-effect{
+    	max-width: 390px; 
+    	max-height: 312px;
+
+	}
+	 .container-effect img:hover{
+		bottom: -55px;
+	}
+}
+
+@media only screen and (max-width: 500px){
+}
+
+@media only screen and (max-width: 450px){
+
+	 .container-effect img, .container-effect{
+    	max-width: 240px; 
+    	max-height: 192px;
+
+	}
+		#about, #portfolio-about{
+		height: 415px;	
+	}
+}
