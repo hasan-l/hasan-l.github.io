@@ -15,15 +15,17 @@ $(document).ready(function(){
 	//It has some logic built in to identify those jump links, and not target other links.
 	//$('a[href*="#"]') selects all links with hashes
 	  $('a[href*="#"]:not([href="#"])').click(function() {
+	//on page links
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
+    	//gets part of the URL beginning with # - figure out which element to scroll to
+		var target = $(this.hash);
+		//does scroll target exist?
+		if (target.length) {
+			$('html, body').animate({
+				scrollTop: target.offset().top
+			}, 1000);
+			return false;
+		}
     }
   });
 
