@@ -17,7 +17,8 @@ $(document).ready(function(){
 	  $('a[href*="#"]:not([href="#"])').click(function() {
 	//on page links
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-    	//gets part of the URL beginning with # - figure out which element to scroll to
+    	//gets part of the href attribute beginning with # - figure out which element to scroll to
+    	//this.hash returns id selector
 		var target = $(this.hash);
 		//does scroll target exist?
 		if (target.length) {
