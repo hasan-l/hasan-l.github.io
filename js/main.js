@@ -13,6 +13,7 @@ $(document).ready(function(){
 
 	//smooth page scroll to an anchor on the same page. 
 	//It has some logic built in to identify those jump links, and not target other links.
+	//$('a[href*="#"]') selects all links with hashes
 	  $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
